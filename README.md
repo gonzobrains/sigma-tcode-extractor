@@ -2,6 +2,10 @@
 
 Extract Sigma rules related to MITRE ATT&CK T-codes and export them in a CSV format with YAML rule contents and tactics.
 
+## Note
+
+This script is currently designed to work on MACOS.  You may need to change it to grep/sed/awk/bash better on other systems.
+
 ## Features
 
 - Extracts Sigma rule file paths and metadata from a local Sigma repo
@@ -17,13 +21,13 @@ Extract Sigma rules related to MITRE ATT&CK T-codes and export them in a CSV for
 
 ```bash
 export SIGMA_DIR=~/dev/sigma
-./get_sigma_rules_local.sh T1059 T1078 T1486
+./getsigma.sh T1059 T1078 T1486
 ```
 
 Or from a file:
 
 ```bash
-./get_sigma_rules_local.sh $(cat t_codes.txt)
+./getsigma.sh $(cat t_codes.txt)
 ```
 
 ## License

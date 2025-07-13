@@ -27,7 +27,7 @@ for T_CODE in "$@"; do
   T_NAME=$(curl -s "https://attack.mitre.org/techniques/${T_CODE}/" | sed -n 's:.*<title>\(.*\) - Enterprise.*</title>.*:\1:p')
 
   if [ -z "$T_NAME" ]; then
-    echo "❌ Skipping invalid T-code: $T_CODE"
+    echo "Skipping invalid T-code: $T_CODE"
     continue
   fi
 
